@@ -8,9 +8,9 @@ summary: |-
 upstream:
   url: https://www.ppsspp.org/
   version:
-    type: command
-    run: |-
-      curl -sL https://archlinux.org/packages/extra/x86_64/ppsspp/ |awk -F'(<h2>ppsspp |</h2>)' '/<h2>/ {print $2}'
+    type: arch_package
+    package: ppsspp
+    release: true
 
 release:
   branch: master
