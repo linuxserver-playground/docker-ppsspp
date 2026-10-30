@@ -11,6 +11,13 @@ upstream:
     type: arch_package
     package: ppsspp
     release: true
+  notes:
+    type: github_release
+    repo: hrydgard/ppsspp
+    tag: v${VERSION}
+    transform:
+    - regex: -\d+$
+      replace: ''
 
 release:
   branch: master
